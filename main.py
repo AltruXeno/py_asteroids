@@ -10,7 +10,7 @@ class Game:
         pygame.init()
 
         # Set up the drawing window
-        pygame.display.set_caption("Python Asteroids")
+        pygame.display.set_caption("Asteroids")
         self.screen = pygame.display.set_mode([SCREEN_WIDTH, SCREEN_HEIGHT])
         # Create the player in the middle of the screen
         self.player = Player(pygame.Vector2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2))
@@ -23,7 +23,7 @@ class Game:
             # Fill the screen with black to clear the screen
             self.screen.fill(BG_COLOR)
             # Draw the player on the screen
-            self.screen.blit(self.player.surf, self.player.rect)
+            self.player.draw(self.screen)
             # Flip the display and tick the clock
             pygame.display.flip()
             self.clock.tick(30)
